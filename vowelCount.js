@@ -35,7 +35,6 @@ function getCount(str) {
   for (let vowel of str) {
     obj[vowel] += 1;
   }
-  console.log(obj)
 
   for (let key in obj) {
     if (!isNaN(obj[key])) {
