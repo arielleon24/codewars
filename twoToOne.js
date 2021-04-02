@@ -44,7 +44,21 @@ const assertArraysEqual = function (array1, array2) {
 /// Kata ------------
 
 function longest(s1, s2) {
-  // your code
+  const array = [];
+
+  for (let char of s1) {
+    if (!array.includes(char)) {
+      array.push(char)
+    }
+  }
+
+  for (let char of s2) {
+    if (!array.includes(char)) {
+      array.push(char)
+    }
+  }
+
+  return array.sort().join("")
 }
 
 assertEqual(longest("aretheyhere", "yestheyarehere"), "aehrsty")
