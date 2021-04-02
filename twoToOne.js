@@ -47,6 +47,6 @@ function longest(s1, s2) {
   // your code
 }
 
-assertEquals(longest("aretheyhere", "yestheyarehere"), "aehrsty")
-assertEquals(longest("loopingisfunbutdangerous", "lessdangerousthancoding"), "abcdefghilnoprstu")
-assertEquals(longest("inmanylanguages", "theresapairoffunctions"), "acefghilmnoprstuy")
+assertEqual(longest("aretheyhere", "yestheyarehere"), "aehrsty")
+assertEqual(longest("loopingisfunbutdangerous", "lessdangerousthancoding"), "abcdefghilnoprstu")
+assertEqual(longest("inmanylanguages", "theresapairoffunctions"), "acefghilmnoprstuy")
