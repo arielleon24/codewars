@@ -29,3 +29,22 @@ const assertArraysEqual = function (array1, array2) {
     console.log(`😃😃😃 Assertion Passed: ${array1} === ${array2}`);
   }
 };
+
+function getMiddle(s)
+{
+  result = ""
+  if(s.length % 2 === 0) {
+    let mid = s.length / 2 - 1
+    let midNext = s.length / 2 
+    result += s[mid]
+    result += s[midNext]
+    console.log(result)
+  } else {
+    
+  }
+}
+
+assertEqual(getMiddle("test"),"es");
+assertEqual(getMiddle("testing"),"t");
+assertEqual(getMiddle("middle"),"dd");
+assertEqual(getMiddle("A"),"A");
