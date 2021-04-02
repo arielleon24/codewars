@@ -33,18 +33,23 @@ const assertArraysEqual = function (array1, array2) {
 function getMiddle(s)
 {
   result = ""
-  if(s.length % 2 === 0) {
-    let mid = s.length / 2 - 1
-    let midNext = s.length / 2 
+  let mid = s.length / 2 
+  if(s.length < 2) {
+    return s[0]
+  } else if(s.length % 2 === 0) {
+    let midLessOne = s.length / 2 - 1 
+    result += s[midLessOne]
     result += s[mid]
-    result += s[midNext]
-    console.log(result)
+    return result
   } else {
-    
+    // console.log(mid)
+    let truemid = s[mid]
+    result += truemid
+    return result
   }
 }
 
-assertEqual(getMiddle("test"),"es");
+// assertEqual(getMiddle("test"),"es");
 assertEqual(getMiddle("testing"),"t");
-assertEqual(getMiddle("middle"),"dd");
+// assertEqual(getMiddle("middle"),"dd");
 assertEqual(getMiddle("A"),"A");
