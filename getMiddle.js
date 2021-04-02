@@ -42,14 +42,11 @@ function getMiddle(s)
     result += s[mid]
     return result
   } else {
-    // console.log(mid)
-    let truemid = s[mid]
-    result += truemid
-    return result
+    return s[Math.floor(mid)]
   }
 }
 
-// assertEqual(getMiddle("test"),"es");
+assertEqual(getMiddle("test"),"es");
 assertEqual(getMiddle("testing"),"t");
-// assertEqual(getMiddle("middle"),"dd");
+assertEqual(getMiddle("middle"),"dd");
 assertEqual(getMiddle("A"),"A");
