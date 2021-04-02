@@ -1,3 +1,5 @@
+//assertions functions 
+
 const assertEqual = function(actual, expected) {
   if (actual === expected) {
     console.log(`✅ Assertion Passed ✅: ${actual} === ${expected}`);
@@ -30,15 +32,12 @@ const assertArraysEqual = function (array1, array2) {
   }
 };
 
-
-//// Code above are assertions 
-
+//  KATA ------------
 
 let uniqueInOrder=function(iterable){
   const array = [];
   let index = 1;
   for(let element of iterable) {
-    console.log(element)
     if (element === iterable[index]) {
       index ++
     } else {
