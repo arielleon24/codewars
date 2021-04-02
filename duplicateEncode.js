@@ -57,3 +57,7 @@ function duplicateEncode(word){
    return str   
 }
     
+assertArraysEqual(duplicateEncode("din"),"(((");
+assertArraysEqual(duplicateEncode("recede"),"()()()");
+assertArraysEqual(duplicateEncode("Success"),")())())","should ignore case");
+assertArraysEqual(duplicateEncode("(( @"),"))((");
