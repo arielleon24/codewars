@@ -47,6 +47,12 @@ function findOdd(A) {
       intObj[int] += 1
     }
   }
+  for(let key in intObj) {
+    if(intObj[key] % 2 === 1) {
+      console.log(typeof key)
+      return Number(key)
+    }
+  }
   return 0;
 }
 
