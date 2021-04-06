@@ -5,8 +5,7 @@ function solution(number){
   for(i = number; i > 0; i--) {
     console.log(number)
   }
-  
 }
 
 
-test(10,23)
+assertEqual(solution(10,23))
