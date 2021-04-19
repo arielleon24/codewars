@@ -15,8 +15,15 @@ function generateHashtag (str) {
     console.log(false)
     return false
   } else {
-    console.log("#" + string)
-    return "#" + string
+    const mySentence = str;
+    const words = mySentence.split(" ");
+
+    for (let i = 0; i < words.length; i++) {
+    words[i] = words[i][0].toUpperCase() + words[i].substr(1);
+  }
+    let result = words.join(" ").replace(/\s/g, "")
+    console.log(result)
+    return "#" + result;
   }
 
 }
