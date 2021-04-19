@@ -11,10 +11,12 @@ If the input or the result is an empty string it must return false. */
 
 function generateHashtag (str) {
   const string = str.replace(/\s/g, "")
-  console.log(string)
   if (string.length === 0){
     console.log(false)
     return false
+  } else {
+    console.log("#" + string)
+    return "#" + string
   }
 
 }
