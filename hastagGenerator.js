@@ -9,3 +9,14 @@ All words must have their first letter capitalized.
 If the final result is longer than 140 chars it must return false.
 If the input or the result is an empty string it must return false. */
 
+function generateHashtag (str) {
+  const string = str.replace(/\s/g, "")
+  console.log(string)
+  if (string.length === 0){
+    console.log(false)
+    return false
+  }
+
+}
+
+generateHashtag(" ".repeat(200))
