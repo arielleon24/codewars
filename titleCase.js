@@ -21,16 +21,17 @@ function titleCase(title, minorWords) {
   } else {
     const titleWords = title.toLowerCase().split(" ")
     const exception = minorWords.toLowerCase().split(" ")
-    titleWords.forEach(word => {
-      if(word === titleWords[0]){
+    titleWords.forEach((word, index) => {
+      if(index === 0 ){
         array.push(modify(word))
-      } else if (word !== titleWords[0] && !exception.includes(word)) {
+      } else if (!exception.includes(word)) {
+        console.log("this isnt in exceptions", word)
         array.push(modify(word))
       } else if (exception.includes(word)) {
-        array.push(word)
+        console.log("this is in exceptions", word)
+        array.push(word.toLowerCase())
       }
     });
-    console.log(array.join(' '))
     return array.join(' ')
   }
   
@@ -38,6 +39,6 @@ function titleCase(title, minorWords) {
 
 // Test cases
 // assertEquals(titleCase(''), '')
-assertEquals(titleCase('a clash of KINGS', 'a an the of'), 'A Clash of Kings')
+// assertEquals(titleCase('a clash of KINGS', 'a an the of'), 'A Clash of Kings')
 assertEquals(titleCase('THE WIND IN THE WILLOWS', 'The In'), 'The Wind in the Willows')
 // assertEquals(titleCase('the quick brown fox'), 'The Quick Brown Fox')
