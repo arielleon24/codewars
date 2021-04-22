@@ -1,5 +1,17 @@
+/// Assertions
+const assertEqual = require("./assertEqual")
 
 
+function titleCase(title, minorWords) {
+  if(title.length < 1) {
+    return title
+  } else {
+    
+  }
+  const titleWords = title.split(" ")
+  const exception = minorWords.split(" ")
+  
+}
 
 // Test cases
 assertEquals(titleCase(''), '')
