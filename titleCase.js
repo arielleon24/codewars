@@ -3,7 +3,7 @@ const assertEquals = require("./assertEqual")
 
 const modify = (word) =>{
   let upper = word[0].toUpperCase()
-  let rest = word.substring(1)
+  let rest = word.substring(1).toLowerCase()
   return upper + rest
 }
 
@@ -40,5 +40,9 @@ function titleCase(title, minorWords) {
 // Test cases
 // assertEquals(titleCase(''), '')
 // assertEquals(titleCase('a clash of KINGS', 'a an the of'), 'A Clash of Kings')
-assertEquals(titleCase('THE WIND IN THE WILLOWS', 'The In'), 'The Wind in the Willows')
-// assertEquals(titleCase('the quick brown fox'), 'The Quick Brown Fox')
+// assertEquals(titleCase('THE WIND IN THE WILLOWS', 'The In'), 'The Wind in the Willows')
+assertEquals(titleCase('the quick brown fox'), 'The Quick Brown Fox')
+
+
+// extra test case
+assertEquals(titleCase('aBC deF Ghi'), 'Abc Def Ghi')
