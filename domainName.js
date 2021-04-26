@@ -1,3 +1,7 @@
+////
+
+// not completed
+
 //assertion 
 const assertEqual = require("./assertEqual")
 
@@ -11,7 +15,7 @@ function domainName(url){
     array[addOne] === undefined? result.push(array[index]) : "";
   });
   const finalRes = result.toString().split(".")
-  return (finalRes[0] === 'www'? finalRes[1] : finalRes[0])
+  return (finalRes[0] === 'www' || finalRes[0] === " " ? finalRes[1] : finalRes[0])
 }
 
 //test
