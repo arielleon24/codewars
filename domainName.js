@@ -4,7 +4,11 @@ const assertEqual = require("./assertEqual")
 //function
 
 function domainName(url){
-  //your code here
+  let result = ""
+  for(let letter of url){
+    result += letter
+  }
+  console.log
 }
 
 //test
