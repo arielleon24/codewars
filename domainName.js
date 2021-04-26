@@ -4,11 +4,14 @@ const assertEqual = require("./assertEqual")
 //function
 
 function domainName(url){
-  let result = ""
-  for(let letter of url){
-    result += letter
-  }
-  console.log
+  let result = []
+  array = url.split("/")
+  const target = array.forEach((element, index) => {
+    let addOne = index + 1
+    array[addOne] === undefined? result.push(array[index]) : "";
+  });
+  const finalRes = result.toString().split(".")
+  return (finalRes[0] === 'www'? finalRes[1] : finalRes[0])
 }
 
 //test
