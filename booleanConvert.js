@@ -8,7 +8,7 @@ const assertEqual = require("./assertEqual")
 //function
 
 function boolToWord( bool ){
-  //...
+  return (bool === false? 'No' : 'Yes');
 }
 
 //test cases
