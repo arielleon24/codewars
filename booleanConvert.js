@@ -3,3 +3,15 @@
 
 //assertion 
 
+const assertEqual = require("./assertEqual")
+
+//function
+
+function boolToWord( bool ){
+  //...
+}
+
+//test cases
+
+assertEqual(boolToWord(true), 'Yes')
+assertEqual(boolToWord(false), 'No')
