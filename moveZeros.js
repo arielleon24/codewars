@@ -5,9 +5,11 @@ let moveZeros = function (arr) {
   let newArray = [];
   let zeroArray = [];
   for(let i of arr) {
-    newArray.push(arr[i])
-    if(arr[i] === 0) {
-      zeroArray.push(arr[i])
+    
+    if(i === 0) {
+      zeroArray.push(i)
+    } else {
+      newArray.push(i)
     }
   }
   return newArray.concat(zeroArray)
