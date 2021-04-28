@@ -3,9 +3,14 @@ const assertEqual = require("./assertEqual")
 
 let moveZeros = function (arr) {
   let newArray = [];
+  let zeroArray = [];
   for(let i of arr) {
-    
+    newArray.push(arr[i])
+    if(arr[i] === 0) {
+      zeroArray.push(arr[i])
+    }
   }
+  return newArray.concat(zeroArray)
 }
 
 
