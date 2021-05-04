@@ -1,6 +1,9 @@
 //assertions functions 
 const assertEqual = require("./assertEqual")
 
+function humanReadable(seconds) {
+  // TODO
+}
 
 //test cases 
 
