@@ -14,6 +14,7 @@
 const assertEqual = require("./assertEqual")
 
 function score( dice ) {
+  const diceRolls = [];
   const finalScore = 0
   const obj = {}
   for (let roll of dice) {
@@ -23,7 +24,22 @@ function score( dice ) {
       obj[roll] = 1
     }
   }
-  console.log(obj)
+
+  for(let key in obj) {
+    diceRolls.push(key)
+  }
+  diceRolls = diceRolls.sort(function(a, b){return a - b})
+  console.log(diceRolls)
+  // for(let key in obj) {
+  //   console.log(obj[key])
+  //   console.log("key", key)
+  //   if(key === 1 && obj[key] === 1) {
+  //     finalScore = 100
+  //   } else if(key === 5 && obj[key] === 1) {
+  //     finalScore = 50
+  //   }
+  // }
+  return finalScore
 }
 
 assertEqual(score( [2, 3, 4, 6, 2] ), 0)
