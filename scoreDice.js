@@ -28,18 +28,17 @@ function score( dice ) {
   for(let key in obj) {
     if(obj[key] === 3) {
       if(Number(key) === 1) {
-        finalScore = 1000
+        finalScore += 1000
       } else {
-        finalScore = key + 0 + 0
-        finalScore = Number(finalScore)
+        finalScore += Number(key + 0 + 0)
       }
     } else {
-      console.log(typeof key)
       if(Number(key) === 5) {
         finalScore += 50
       } else if (Number(key) === 1) {
+        if(obj[key] < 3 || obj[key] > 3)
         finalScore += 100
-      }
+      } 
     }
   }
   return finalScore
