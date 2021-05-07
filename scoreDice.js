@@ -14,8 +14,17 @@
 const assertEqual = require("./assertEqual")
 
 function score( dice ) {
-  // Fill me in!
+  const finalScore = 0
+  const obj = {}
+  for (let roll of dice) {
+    if(obj[roll]) {
+      obj[roll] += 1
+    } else {
+      obj[roll] = 1
+    }
+  }
+  console.log(obj)
 }
 
-assertEqual(( [2, 3, 4, 6, 2] ), 0)
-assertEqual(( [4, 4, 4, 3, 3] ), 400)
+assertEqual(score( [2, 3, 4, 6, 2] ), 0)
+assertEqual(score( [4, 4, 4, 3, 3] ), 400)
