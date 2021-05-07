@@ -26,23 +26,25 @@ function score( dice ) {
   }
 
   for(let key in obj) {
-    diceRolls.push(key)
-  }
-  diceRolls = diceRolls.sort(function(a, b){return a - b})
-  for(let x of diceRolls) {
-    if(x === 5 && obj[x] === 1 && score < 50) {
-      finalScore = 50
-    } else if (x === 1 && obj[x] === 3) {
-      finalScore = 100
-    } else if(x === 1 && obj[x] === 1){
-      finalScore = 1000
-    } else if (obj[x] === 3) {
-      finalScore = x + 0 + 0
+    if(obj[key] === 3) {
+      if(Number(key) === 1) {
+        finalScore = 1000
+      } else {
+        finalScore = key + 0 + 0
+        finalScore = Number(finalScore)
+      }
+    } else {
+      console.log(typeof key)
+      if(Number(key) === 5) {
+        finalScore += 50
+      } else if (Number(key) === 1) {
+        finalScore += 100
+      }
     }
   }
-  console.log(typeof finalScore)
-  return Number(finalScore)
+  return finalScore
 }
 
-assertEqual(score( [2, 3, 4, 6, 2] ), 0)
-assertEqual(score( [4, 4, 4, 3, 3] ), 400)
+// assertEqual(score( [2, 3, 4, 6, 2] ), 0)
+// assertEqual(score( [4, 4, 4, 3, 3] ), 400)
+assertEqual(score( [2, 4, 4, 5, 4] ), 450)
