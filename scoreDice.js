@@ -25,25 +25,54 @@ function score( dice ) {
     }
   }
 
+  // for(let key in obj) {
+  //   if(obj[key] === 3) {
+  //     if(Number(key) === 1) {
+  //       finalScore += 1000
+  //     } else {
+  //       finalScore += Number(key + 0 + 0)
+  //     }
+  //   } else {
+  //     if(Number(key) === 5) {
+  //       finalScore += 50
+  //     } else if (Number(key) === 1) {
+  //       if(obj[key] < 3) {
+  //         finalScore += 100
+  //       }
+  //       if(obj[key] > 3) {
+  //        finalScore += 1000
+  //       }
+  //     } 
+  //   }
+  // }
+
   for(let key in obj) {
-    if(obj[key] === 3) {
-      if(Number(key) === 1) {
-        finalScore += 1000
-      } else {
-        finalScore += Number(key + 0 + 0)
-      }
-    } else {
-      if(Number(key) === 5) {
-        finalScore += 50
-      } else if (Number(key) === 1) {
-        if(obj[key] < 3 || obj[key] > 3)
+    if(Number(key) === 1) {
+      if(obj[Number(key)] === 1) {
         finalScore += 100
-      } 
+      }
+      if(obj[Number(key)] === 3) {
+        finalScore += 1000
+      }
+      if(obj[Number(key)] === 4) {
+        finalScore += 1100
+      }
+      if(obj[Number(key)] === 5) {
+        finalScore += 1200
+      }
+    } else if(Number(key) === 5) {
+      finalScore += 50
+    } else if (obj[key] = 3) {
+      finalScore += Number(key + 0 + 0)
     }
   }
   return finalScore
 }
 
-// assertEqual(score( [2, 3, 4, 6, 2] ), 0)
-// assertEqual(score( [4, 4, 4, 3, 3] ), 400)
+assertEqual(score( [2, 3, 4, 6, 2] ), 0)
+assertEqual(score( [4, 4, 4, 3, 3] ), 400)
 assertEqual(score( [2, 4, 4, 5, 4] ), 450)
+// assertEqual(score([ 1, 1, 1, 1, 3 ][ 1, 1, 1, 1, 5 ]
+//   [ 2, 4, 4, 5, 4 ]
+//   [ 3, 4, 5, 3, 3 ]
+//   [ 1, 5, 1, 3, 4 ] ), 450)
